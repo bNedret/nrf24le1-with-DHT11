@@ -1,0 +1,12 @@
+
+Building dependency file 'dep/main.d'
+[ -d dep ] || mkdir dep > /dev/null
+sdcc -MM -Iinclude -I../nRF24LE1_SDK/_target_sdcc_nrf24le1_32/include -I../nRF24LE1_SDK/include src/main.c >> dep/main.d.tmp
+sed 's,\(main\)\.o[ :]*,\1.o dep/main.d : ,g' < dep/main.d.tmp > dep/main.d
+rm -f dep/main.d.tmp
+Finished building dependency file 'dep/main.d'
+
+Building object file 'obj/main.rel'
+[ -d obj ] || mkdir obj > /dev/null
+sdcc --model-large --std-c99 -Iinclude -I../nRF24LE1_SDK/_target_sdcc_nrf24le1_32/include -I../nRF24LE1_SDK/include -c src/main.c -o "obj/"
+Finished building object file 'obj/main.rel'
