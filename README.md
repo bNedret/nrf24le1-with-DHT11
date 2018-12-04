@@ -1,4 +1,4 @@
-nrf24le1-with-DHT11
+nrf24le1-with-DHT11-Transmiter
 ================
 
 This is an example application for the [nRF24LE1](http://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRF24LE1) using [SDCC](http://sdcc.sourceforge.net/) and the [nRF24LE1_SDK](https://github.com/DeanCording/nRF24LE1_SDK).
